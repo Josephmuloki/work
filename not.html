@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="stycal.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="inputbox">
+        <div>
+            <button class="operator" onclick="delEverthing()">AC</button>
+            <button class="operator" onclick="delOnePart()">DEL</button>
+            <button class="operator" onclick="showValueInScreen('%')">%</button>
+            <button class="operator" onclick="showValueInScreen('/')">/</button>
+        </div>
+        <div>
+            <button onclick="showValueInScreen(7)">7</button>
+            <button onclick="showValueInScreen(8)">8</button>
+            <button onclick="showValueInScreen(9)">9</button>
+            <bautton class="operator" onclick="showValueInScreen('*')">*</button>
+        </div>
+        <div>
+            <button onclick="showValueInScreen(4)">4</button>
+            <button onclick="showValueInScreen(5)">5</button>
+            <button onclick="showValueInScreen(6)">6</button>
+            <button class="operator" onclick="showValueInScreen('-')">-</button>
+        </div>
+        <div>
+            <button onclick="showValueInScreen(1)">1</button>
+            <button onclick="showValueInScreen(2)">2</button>
+            <button onclick="showValueInScreen(3)">3</button>
+            <button class="operator" onclick="showValueInScreen('.')">.</button>
+        </div>
+        <div>
+            <button onclick="showValueInScreen('00')">00</button>
+            <button onclick="showValueInScreen(0)">0</button>
+            <button class="operator" onclick="showValueInScreen('+')">+</button>
+            <button class="equalbtn" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>

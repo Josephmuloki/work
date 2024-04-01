@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+  #grade-calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid black;
+    background: #6d6868;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  #grade-calculator h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #grade-calculator label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #grade-calculator input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  }
+  
+  #grade-calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  #grade-calculator button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #grade-calculator #grade-result {
+    padding: 10px;
+    border: 1px solid #6d6868;
+    border-radius: 5px;
+    background-color:  #ffffff;
+    margin-bottom: 0;
+  }
+ </style>
+  </head>
+  <body> 
+    <div id="grade-calculator">
+        <h1>Student Grade Calculator</h1>
+        <label for="score-input">Enter score:</label>
+        <input type="number" id="score-input" name="score-input" min="0" max="100" />
+        <button id="calculate-button">Calculate Grade</button>
+        <div id="grade-result"></div>
+      </div>  
+    <script >
+       function calculateGrade(score) {
+  if (score >= 90 && score <= 100) {
+    return 'A';
+  } else if (score >= 80 && score < 89) {
+    return 'B';
+  } else if (score >= 70 && score < 79) {
+    return 'C';
+  } else if (score >= 60 && score < 69) {
+    return 'D';
+  } else if (score >= 0 && score < 59) {
+    return 'F';
+  } else {
+    return 'Invalid score';
+  }
+}
+
+// Get the HTML elements
+const scoreInput = document.getElementById('score-input');
+const gradeResult = document.getElementById('grade-result');
+const calculateButton = document.getElementById('calculate-button');
+
+// Add event listener to the calculate button
+calculateButton.addEventListener('click', () => {
+  const score = parseFloat(scoreInput.value);
+  const grade = calculateGrade(score);
+  gradeResult.textContent = `Grade: ${grade}`;
+});
+    </script>
+  </body>
+</html>
