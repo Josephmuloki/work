@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f0f0;
+  }
+  
+  #counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 3em;
+    background-image: url('https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_1280.jpg');
+    background-color: rgb(92, 85, 85);
+    border: 2px solid #0bab03;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #count {
+    margin: 0 1em;
+    user-select: none;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    color: red;
+  }
+  
